@@ -27,14 +27,14 @@ class Skewer extends ShishD{
 
 class Onion extends ShishD{
   ShishD s;
-	public Onion(ShishD _s) {s = _s;}
+  public Onion(ShishD _s) {s = _s;}
 	boolean onlyOnions() {return ooFn.forOnion(s);}
   boolean isVegetarian() {return ivFn.forOnion(s);}
 }
 
 class Lamb extends ShishD{
   ShishD s;
-	public Lamb(ShishD _s) {s = _s;}
+  public Lamb(ShishD _s) {s = _s;}
 	boolean onlyOnions() {return ooFn.forLamb(s);}
   boolean isVegetarian() {return ivFn.forOnion(s);}
 }

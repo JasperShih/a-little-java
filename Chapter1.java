@@ -7,14 +7,16 @@ abstract class PointD {}
 class CartesianPt extends PointD{
 	int	x;
 	int	y;
-	public CartesianPt(int _x, int _y){x = _x;
-																		 y = _y;}}
+	public CartesianPt(int _x, int _y){
+		x = _x;
+		y = _y;}}
 
 class ManhattanPt extends PointD{
 	int	x;
 	int	y;
-	public ManhattanPt(int _x, int _y){x = _x;
-																		 y = _y;}}
+	public ManhattanPt(int _x, int _y){
+		x = _x;
+		y = _y;}}
 
 abstract class NumD {}
 class Zero extends NumD {}
@@ -35,4 +37,4 @@ public class Chapter1{
 	public static void main(String[] args){
 		LayerD aaa = new Base(6);
 		if (aaa instanceof Object){System.out.println("yes");}
-    else{System.out.println("no");}}}
+		else{System.out.println("no");}}}

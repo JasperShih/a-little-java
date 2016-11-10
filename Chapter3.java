@@ -67,20 +67,13 @@ class Spinach extends PizzaD{
 
 public class Chapter3 {
 	public static void main(String[] args) {
-		new Cheese(
-				new Anchovy(
-						new Sausage(
-								new Crust()))).removeAnchovy().show();
+    new Cheese(new Anchovy(new Sausage(new Crust()))).removeAnchovy().show();
 //		>
 //		Cheese
 //		Sausage
 //		Crust
 
-		new Olive(
-				new Anchovy(
-						new Cheese(
-								new Anchovy(
-										new Crust())))).addCheeseOnAnchovy().show();
+		new Olive(new Anchovy(new Cheese(new Anchovy(new Crust())))).addCheeseOnAnchovy().show();
 //		>
 //		Olive
 //		Cheese
@@ -90,11 +83,7 @@ public class Chapter3 {
 //		Anchovy
 //		Crust
 
-		new Olive(
-				new Anchovy(
-						new Cheese(
-								new Anchovy(
-										new Crust())))).substituteAnchovyByCheese().show();
+		new Olive(new Anchovy(new Cheese(new Anchovy(new Crust())))).substituteAnchovyByCheese().show();
 //		>
 //		Olive
 //		Cheese
@@ -102,12 +91,7 @@ public class Chapter3 {
 //		Cheese
 //		Crust
 
-
-		new Olive(
-				new Anchovy(
-						new Cheese(
-								new Anchovy(
-										new Crust())))).mySub().show();
+		new Olive(new Anchovy(new Cheese(new Anchovy(new Crust())))).mySub().show();
 //		Olive
 //		Cheese
 //		Cheese
