@@ -43,3 +43,13 @@ class ManhattanPt extends PointD{
 		return x+y;
 	}
 }
+--------------------public----------------------------
+class Anchovy extends FishD{
+  /*because the function, we want to overwrite, is in other package,
+    so we have to use public*/
+  public boolean equals(Object o) {return (o instanceof Anchovy);}
+}
+
+------------------equals & instanceof------------------
+we have to overwrite "equals" function before we use it.
+//instanceof compared obj with class; equals compared two objs.
