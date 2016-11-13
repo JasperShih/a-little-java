@@ -53,3 +53,7 @@ class Anchovy extends FishD{
 ------------------equals & instanceof------------------
 we have to overwrite "equals" function before we use it.
 //instanceof compared obj with class; equals compared two objs.
+
+-------------------------------------------------------
+eception可能寫在同一層較好,
+python 我看還是用OOP寫法, 他對fp支援不夠
