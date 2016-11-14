@@ -57,8 +57,7 @@ class bIsFlatV implements bTreeVisitorI{
 class bIsDeepV implements bTreeVisitorI{
   public boolean forBaseTree() {return true;}
   public boolean forFlatExtendTree(FruitType car, TreeType cdr) {return false;}
-  public boolean forDeepExtendTree(TreeType car, TreeType cdr) {return (car.accept(this) &&
-  																																		  cdr.accept(this));}
+  public boolean forDeepExtendTree(TreeType car, TreeType cdr) {return (car.accept(this) && cdr.accept(this));}
 }
 
 class bHasFruitV implements bTreeVisitorI{
