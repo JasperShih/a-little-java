@@ -6,7 +6,7 @@ class: introduce a variant
 extends: connects a variant to a datatype
 
 
---------Template method pattern & Hook:-----------
+--------template method pattern & hook:-----------
 //method closerToO是template
 //template method pattern instance就是abstract class裡的實作method?
 //而該實作method裡用到的abstract method就稱為hook?
@@ -59,6 +59,13 @@ primitive:int(1, 6, 8...), boolean(true, false), ......, Object不是他們的su
 而從Integer, Boolean, ......, new出來的物件則是.
 所以這兩者是不同的, 如5和new Integer(5)是不同的.
 
-------------------------------------------
+------------------return type-------------------------------------
+Object cool() {return new Boolean(true);}
+此函式回傳的是Object物件, 而不是Boolean物件,
+要使用Boolean的members時, 要先將回傳的Object物件
+downward cast成Boolean物件.
+
+
+
 exception可能寫在同一層較好,
 python 我看還是用OOP寫法, 他對fp支援不夠
