@@ -69,3 +69,5 @@ downward cast成Boolean物件.
 
 exception可能寫在同一層較好,
 python 我看還是用OOP寫法, 他對fp支援不夠
+書中的可能不是最簡結構, 看是否能不用任何design patterns構造程序
+挑EOPL幾個例子來實做
