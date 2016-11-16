@@ -79,11 +79,11 @@ interface ExpressionVisitorI{
 abstract class EvalType implements ExpressionVisitorI{
     @Override public Object forConstant(Object atom) {return atom;}
     @Override public Object forPlus(ExpressionType exp1, ExpressionType exp2) {return plus(exp1.apply(this),
-                                                                                      exp2.apply(this));}
+                                                                                           exp2.apply(this));}
     @Override public Object forDiff(ExpressionType exp1, ExpressionType exp2) {return diff(exp1.apply(this),
-                                                                                      exp2.apply(this));}
+                                                                                           exp2.apply(this));}
     @Override public Object forProduct(ExpressionType exp1, ExpressionType exp2) {return product(exp1.apply(this),
-                                                                                         exp2.apply(this));}
+                                                                                                 exp2.apply(this));}
     abstract Object plus(Object exp1, Object exp2);
     abstract Object diff(Object exp1, Object exp2);
     abstract Object product(Object exp1, Object exp2);
