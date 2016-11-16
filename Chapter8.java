@@ -20,7 +20,7 @@ class Diff extends ExpressionType {
     ExpressionType exp1;
     ExpressionType exp2;
     Diff(ExpressionType _exp1, ExpressionType _exp2) {exp1 = _exp1;
-                                                     exp2 = _exp2;}
+                                                      exp2 = _exp2;}
     Object apply(ExpressionVisitorI function) {return function.forDiff(exp1, exp2);}
 }
 
@@ -34,7 +34,6 @@ class Product extends ExpressionType {
 
 //SetType
 abstract class SetType{
-    ExpressionVisitorI qq;
     SetType add(Integer i) {if (isMember(i))
                                {return this;}
                             else {return new Add(i, this);}}
