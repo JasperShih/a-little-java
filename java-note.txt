@@ -64,8 +64,59 @@ Object cool() {return new Boolean(true);}
 此函式回傳的是Object物件, 而不是Boolean物件,
 要使用Boolean的members時, 要先將回傳的Object物件
 downward cast成Boolean物件.
+------------------------------------------------------------------
+()>{} : Runnable
+()>{return T}: Supplier<T>
+(T)>{}: Consumer<T>
+(T)>{return R}: Function<T,R>
+我看只能接收單參數的lambda,每次傳入傳出時,都先將args壓縮成一個object,不想用curry,
+或者直接使用member溝通,省去傳入參數.
+Object[] scores = {88, 81, 74};
+Object[][] cords = {{1, 2, 3},
+            		 {4, 5, 6}};
 
 
+-------------------------style-----------------------------------
+//多行不可合併(只要兩者其一多行) > fields和constructor可以合併
+//設定性質的可以合併
+
+class NumArray {
+    int[] m_nums;
+
+    public NumArray(int[] nums) {
+        class update {
+            int[] nums; int sum = 0, size;
+            public update(int[] _nums) {nums = _nums; size = _nums.length;}
+
+            int[] help(int idx) {if (idx == size)
+                                    {return nums;}
+                                 else {sum = sum + nums[idx];
+                                       nums[idx] = sum;
+                                       return help(idx+1);}}
+        }
+        m_nums = new update(nums).help(0);
+    }
+
+    public int sumRange(int i, int j) {
+        i = i-1;
+        int head, tail = m_nums[j];
+
+        if (i == -1)
+           {head = 0;}
+        else {head = m_nums[i];}
+
+        return head-tail;
+    }
+}
+
+---------------anonymous-clojure--------------------------
+
+Object showClusure = (new Object() {int b =10000;
+																	      public void call()
+																	      {System.out.println ("匿名類別：");
+																	        					 System.out.println ("this  ->b= " +b);
+																	                   System.out.println ("main()->a= " +a);}});
+//new Object()應該括號起來
 
 exception可能寫在同一層較好,
 python 我看還是用OOP寫法, 他對fp支援不夠
