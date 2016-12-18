@@ -111,12 +111,26 @@ class NumArray {
 
 ---------------anonymous-clojure--------------------------
 
-Object showClusure = (new Object() {int b =10000;
-																	      public void call()
-																	      {System.out.println ("匿名類別：");
-																	        					 System.out.println ("this  ->b= " +b);
-																	                   System.out.println ("main()->a= " +a);}});
-//new Object()應該括號起來
+public class Chapter4{
+  public static void main(String[] args){
+
+			(new Object() {
+				int a= 10;
+
+				void call(int _a) {init(_a);
+					                 more_than_100();}
+				void init(int _a) {a = _a;}
+				void more_than_100(){
+					if (a <= 100)
+						 {a = a + 1;
+							more_than_100();}
+					else {System.out.println(a);}}}
+			).call(1000);
+
+  }
+}
+
+//new Object()應該括號起來, 當然也可以不要有init函數, 直接在call裡做init動作.
 
 exception可能寫在同一層較好,
 python 我看還是用OOP寫法, 他對fp支援不夠
